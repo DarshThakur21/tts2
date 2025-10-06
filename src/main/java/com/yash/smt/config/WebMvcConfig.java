@@ -13,9 +13,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import java.util.List;
 
-@EnableWebMvc
-@Configuration
 @ComponentScan(basePackages = "com.yash.smt.*")
+@Configuration
+@EnableWebMvc
 public class WebMvcConfig  implements WebMvcConfigurer {
 
         @Bean

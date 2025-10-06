@@ -23,9 +23,9 @@ public class RootConfig {
 public DataSource dataSource() {
     DriverManagerDataSource dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    dataSource.setUrl("jdbc:mysql://localhost:3306/ttspringmvc");
+    dataSource.setUrl("jdbc:mysql://localhost:3306/tasktrackeryash");
     dataSource.setUsername("root");
-    dataSource.setPassword("root");
+    dataSource.setPassword("2106@2308Ud");
     return dataSource;
 }
     @Bean

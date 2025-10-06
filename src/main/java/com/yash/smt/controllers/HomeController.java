@@ -10,11 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/hello")
 public class HomeController {
-//        @RequestMapping(method = RequestMethod.GET)
-//        public String printHello(ModelMap model) {
-//            model.addAttribute("message", "Hello Spring MVC Framework!");
-//            return "home";
-//        }
+        @RequestMapping(method = RequestMethod.GET)
+        public String printHello(ModelMap model) {
+            model.addAttribute("message", "Hello Spring MVC Framework!");
+            return "index";
+        }
     }
 
 

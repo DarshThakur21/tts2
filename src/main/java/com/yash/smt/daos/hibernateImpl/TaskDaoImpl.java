@@ -37,11 +37,18 @@ public class TaskDaoImpl implements TaskDao {
         return  getSession().get(Task.class,id);
     }
 
+//    @Override
+//    public List<Task> findAll() {
+//        return getSession().createQuery("FROM Task", Task.class).list();
+////        return Collections.emptyList();
+//    }
+
     @Override
     public List<Task> findAll() {
         return getSession().createQuery("FROM Task", Task.class).list();
 //        return Collections.emptyList();
     }
+
 
 
     @Override
@@ -63,7 +70,11 @@ public class TaskDaoImpl implements TaskDao {
 
     @Override
     public void delete(int id) {
-        getSession().remove(id);
+        Task task = getSession().get(Task.class, id);
+        if (task != null) {
+            getSession().remove(task);
+        }
+
     }
 
     @Override
